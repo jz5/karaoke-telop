@@ -4,8 +4,8 @@
 (function ($) {
     var viewModel;
     // telop color
-    var foreground = '#3333ff';
-    var background = '#888888';
+    var foreground = '#ff0000';
+    var background = '#ffffff';
     var t = $('textarea:first').val(); // タイムタグ付きテキスト
     var lyrics = new Lyrics(t);
     var player = new MediaElementPlayer('#player1', {
