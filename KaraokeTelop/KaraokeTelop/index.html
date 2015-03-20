@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Telop test</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/mediaelement/mediaelementplayer.min.css" />
+	<style>
+		body {
+			font-family: Meiryo;
+		}
+
+		h1 {
+			font-size: 22px;
+		}
+
+		.telop {
+			font-size: 24px;
+			font-weight: bold;
+			display: inline-block;
+			position: relative;
+			background: linear-gradient(to right, #3333ff 0,#3333ff 0px,#888888 0px,#888888 100%);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<h1>Telop test <small>(Google Chrome only)</small></h1>
+		<ol class="small">
+			<li>（必要であれば） Silverlight プラグインを有効にする</li>
+			<li>Start ボタンをクリック</li>
+			<li>何もしない（プレイヤーの一時停止やシークは未対応）</li>
+		</ol>
+
+		<div style="margin:0 0 10px;">
+			<!-- Video -->
+			<!--<video id="player1" width="640" height="360">
+				<source src="***.wmv" type="video/wmv" />
+			</video>-->
+			<!-- Audio -->
+			<audio id="player1" src="***.mp3" type="audio/mp3" controls="controls"></audio>
+		</div>
+
+		<button id="start" style="margin:10px 0;">Start</button>
+
+		<div data-bind="foreach: lyrics">
+			<div class="line">
+				<div class="telop" data-bind="foreach: words"><span data-bind="text: text"></span></div>
+			</div>
+		</div>
+	</div>
+
+	<div style="display:none;">
+		<textarea>
+			[00:01:34]君[00:03:18]が[00:05:11]代[00:07:17]は[00:10:00]
+			[00:10:20]千[00:11:10]代[00:12:14]に[00:14:14]八[00:15:03]千[00:16:46]代[00:17:48]に[00:19:00]
+			[00:19:13]さ[00:20:04]ざ[00:21:07]れ[00:23:47]石[00:25:50]の[00:28:00]
+			[00:28:28]巌（いわお）[00:31:71]と[00:32:58]な[00:34:25]り[00:34:96]て[00:37:00]
+			[00:37:81]苔（こけ）[00:39:95]の[00:42:36]む[00:45:24]す[00:46:97]ま[00:49:62]で[00:52:89]
+		</textarea>
+	</div>
+
+	<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="//ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+	<script src="/mediaelement/mediaelement-and-player.min.js"></script>
+	<script src="/Scripts/lyrics.js"></script>
+	<script src="/Scripts/main.js"></script>
+</body>
+</html>
